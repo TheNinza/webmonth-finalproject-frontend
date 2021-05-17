@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(45deg, #ff9ce3, #4ab3ff);
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.circle1,
+.circle2 {
+  z-index: -5;
+  position: absolute;
+}
+
+.circle1 {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+
+  background: linear-gradient(180deg, #97ff57 0%, #0d99ff 99.99%, #0094ff 100%);
+  filter: blur(10px);
+  transform: rotate(18deg);
+  left: -120px;
+  top: -100px;
+}
+.circle2 {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+
+  filter: blur(10px);
+  transform: rotate(18deg);
+  right: -50px;
+  bottom: -80px;
+
+  background: linear-gradient(180deg, #ff57d0 0%, #0d99ff 99.99%, #0094ff 100%);
+  filter: blur(5px);
+  transform: rotate(18deg);
+}
+
+.form-container {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.signin-form,
+.signup-form {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid white;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-heading {
+  /* font-weight: bold; */
+  font-size: 28px;
+}
+
+form > * {
+  margin: 10px 0;
+}
+form > *:first-child {
+  margin-top: 0;
+}
+
+form > *:last-child {
+  margin-bottom: 0;
+}
+
+form > input {
+  border: none;
+  height: 10%;
+  width: 250px;
+  border-radius: 15px;
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+form > input:focus {
+  outline: none;
+}
+
+form > button {
+  background: transparent;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+form > button:hover {
+  transform: scale(1.1);
+}
+
+form > button:active {
+  transform: scale(1);
+}
